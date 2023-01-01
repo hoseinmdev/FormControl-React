@@ -1,0 +1,24 @@
+.formControl * {
+  width: 100%;
+}
+.formControl {
+  width: 20rem;
+  padding: 3rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  display: flex;
+  box-shadow: 4px 4px 15px -8px rgba(0,0,0,0.75);
+  gap: 1rem;
+}
+.formControl button {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: #6366f1;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
