@@ -1,11 +1,12 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Form from "./components/Form/Form";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
     <div className="App">
-      <h1 style={{ color: "#4f46e5" }}>ثبت نام</h1>
+      <ToastContainer />
+      <h2 style={{ color: "#4f46e5" }}>ثبت نام</h2>
       <Form />
     </div>
   );
