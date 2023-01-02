@@ -1,15 +1,15 @@
 .formControl * {
-  width: 100%;
+  width: 95%;
 }
 .formControl {
   width: 20rem;
-  padding: 3rem;
+  padding: 2rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 8px;
   display: flex;
-  box-shadow: 4px 4px 15px -8px rgba(0,0,0,0.75);
+  box-shadow: 1px 1px 15px -8px rgba(0,0,0,0.75);
   gap: 1rem;
 }
 .formControl button {
@@ -21,4 +21,9 @@
   border-radius: 8px;
   border: none;
   cursor: pointer;
+  transition: 0.2s;
+  outline: none;
+}
+.formControl button:hover{
+  background-color: #4f46e5;
 }
