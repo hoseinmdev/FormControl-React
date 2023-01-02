@@ -2,7 +2,7 @@ import styles from "./input.module.css";
 
 const Input = ({
   label,
-  placeHolder,
+  placeholder,
   name,
   type = "text",
   onChange,
@@ -19,7 +19,7 @@ const Input = ({
         </div>
         <input
           id={name}
-          placeHolder={placeHolder}
+          placeholder={placeholder}
           type={type}
           name={name}
           onChange={onChange}
