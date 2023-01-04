@@ -6,19 +6,32 @@
   gap: 0.5rem;
   font-size: 1rem;
 }
-.inputControl div {
+
+.ErrorControl {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .inputControl input {
-  width: 95%;
+  width: 100%;
   outline: none;
   border: none;
   border-radius: 4px;
   box-shadow: 1px 1px 12px -8px rgba(0, 0, 0, 0.75);
   padding: 0.4rem;
   font-size: 1rem;
+}
+.passwordControl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.customStyle{
+  cursor: pointer;
+  flex: 1;
+  /* position: absolute; */
+  /* margin-right: 15rem; */
+  
 }
 .errorText {
   display: flex;
