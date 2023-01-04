@@ -14,15 +14,39 @@ const Input = ({
   touched,
 }) => {
   const [showPassword, setShowPassword] = useState(true);
+  const [showIcon, setShowIcon] = useState({
+    hide: 1,
+    unHide: 0,
+  });
+
   const iconClickHandler = () => {
     showPassword ? setShowPassword(false) : setShowPassword(true);
+    setShowIcon({ hide: 0, unHide: 0 });
+    if (showIcon.hide) {
+      setTimeout(() => {
+        setShowIcon({ hide: 0, unHide: 1 });
+      }, 20);
+    }
+    if (showIcon.unHide) {
+      setTimeout(() => {
+        setShowIcon({ hide: 1, unHide: 0 });
+      }, 20);
+    }
   };
   const renderIcon = () => {
     if (type === "password")
       return showPassword ? (
-        <FaEyeSlash className={styles.customStyle} onClick={iconClickHandler} />
+        <FaEyeSlash
+          style={{ opacity: `${showIcon.hide}` }}
+          className={styles.customStyle}
+          onClick={iconClickHandler}
+        />
       ) : (
-        <FaEye className={styles.customStyle} onClick={iconClickHandler} />
+        <FaEye
+          style={{ opacity: `${showIcon.unHide}` }}
+          className={styles.customStyle}
+          onClick={iconClickHandler}
+        />
       );
   };
   return (
@@ -36,7 +60,7 @@ const Input = ({
           <input
             id={name}
             placeholder={placeholder}
-            type={showPassword&&type === "password" ? "password" : "text"}
+            type={showPassword && type === "password" ? "password" : "text"}
             name={name}
             onChange={onChange}
             onBlur={onBlur}

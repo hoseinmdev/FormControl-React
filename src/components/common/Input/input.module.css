@@ -29,9 +29,7 @@
 .customStyle{
   cursor: pointer;
   flex: 1;
-  /* position: absolute; */
-  /* margin-right: 15rem; */
-  
+  transition: "0.3s"  
 }
 .errorText {
   display: flex;
