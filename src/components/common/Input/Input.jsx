@@ -14,15 +14,15 @@ const Input = ({
   touched,
 }) => {
   const [showPassword, setShowPassword] = useState(true);
-  const iconClicked = () => {
+  const iconClickHandler = () => {
     showPassword ? setShowPassword(false) : setShowPassword(true);
   };
   const renderIcon = () => {
     if (type === "password")
       return showPassword ? (
-        <FaEyeSlash className={styles.customStyle} onClick={iconClicked} />
+        <FaEyeSlash className={styles.customStyle} onClick={iconClickHandler} />
       ) : (
-        <FaEye className={styles.customStyle} onClick={iconClicked} />
+        <FaEye className={styles.customStyle} onClick={iconClickHandler} />
       );
   };
   return (
@@ -36,7 +36,7 @@ const Input = ({
           <input
             id={name}
             placeholder={placeholder}
-            type={showPassword ? "password" : "text"}
+            type={showPassword&&type === "password" ? "password" : "text"}
             name={name}
             onChange={onChange}
             onBlur={onBlur}

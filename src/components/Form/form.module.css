@@ -2,6 +2,7 @@
   width: 95%;
 }
 .formControl {
+  transition: 1s;
   width: 20rem;
   padding: 2rem;
   flex-direction: column;
@@ -27,3 +28,6 @@
 .formControl button:hover{
   background-color: #4f46e5;
 }
+/* .formControl button:focus{
+  background-color: aqua;
+} */
